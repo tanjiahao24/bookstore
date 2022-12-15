@@ -23,13 +23,14 @@ class AxiosUtil {
   axiosInstance!: AxiosInstance
   request!: ReqExec
   private constructor() {
-    // this.request = {
-    //   get: (): any => {},
-    //   post: (): any => {},
-    //   put: (): any => {},
-    //   delete: (): any => {},
-    //   patch: (): any => {},
-    // }
+    this.request = {
+      get: (): any => {},
+      post: (): any => {},
+      put: (): any => {},
+      delete: (): any => {},
+      patch: (): any => {},
+    }
+    this.createAxiosInstance()
     this.beforeReqIntercept()
     this.beforeResponseIntercept()
     this.reqPrepare()

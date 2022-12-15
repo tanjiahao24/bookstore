@@ -7,7 +7,10 @@ import { ImageUtil } from './utils/imageUtil'
 import router from '@/router'
 import store from '@/store'
 
-console.log(import.meta.env.VITE_AGE)
+import request from '@/api/CtgyApi'
+const res = await request.getFirstCtgy()
+console.log(res)
+
 ImageUtil.storageImageList()
 console.log(ImageUtil.imageList)
 createApp(App).use(router).use(store).use(ElementPlus, { size: 'small' }).mount('#app')

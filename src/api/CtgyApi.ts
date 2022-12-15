@@ -5,7 +5,7 @@ class CtgyApi {
     return await request.get('/ctgymodule/findFirstCtgys', false)
   }
   async getSecThridCtgy(firstCtgyId: number) {
-    return await request.get(`/ctgymodule//findSecThirdCtgys/${firstCtgyId}`, false)
+    return await request.get(`/ctgymodule/findSecThirdCtgys/${firstCtgyId}`, false)
   }
 }
 
